@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.sec-div {
+    background-color: #12585a;
+    padding: 40px;
+}
+
+li {
+    color: white;
+    list-style-type: none;
+}
+
+.input-check {
+    display: none;
+    visibility: hidden;
+}
+
+.toggle {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 20px;
+    left: 15px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #12585a;
+}
+
+.toggle .common {
+    position: absolute;
+    height: 4px;
+    width: 25px;
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+.toggle .line1 {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .line2 {
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .line3 {
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input:checked~.toggle .line1 {
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+
+input:checked~.toggle .line3 {
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+
+input:checked~.toggle .line2 {
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+
+.drop {
+    margin-top: 3%;
+    height: 20%;
+    width: 100px;
+    /* position: absolute; */
+    background-color: #12585a;
+    transition: 0.5s ease;
+    transform: translate(-220px);
+    z-index: 1;
+}
+
+input:checked~.drop {
+    transform: translate(0);
+}
